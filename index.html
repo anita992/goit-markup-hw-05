@@ -68,7 +68,13 @@
             EFEKTYWNE ROZWIĄZANIA <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button type="button" class="button-index">Zamów usługę</button>
+          <button
+            class="button-index modal-button"
+            type="button"
+            data-modal-open
+          >
+            Zamów usługę
+          </button>
         </div>
       </section>
       <section class="section padding-flex">
@@ -124,14 +130,17 @@
         <div class="container">
           <h2 class="profession">Czym się zajmujemy</h2>
           <ul class="card-set">
-            <li>
-              <img
-                src="./images/h2/h2-photo1.jpg"
-                alt="programista wykonuje projekt na komputerze"
-                width="370"
-                height="294"
-              />
-            </li>
+            <div class="thumb">
+              <li>
+                <img
+                  src="./images/h2/h2-photo1.jpg"
+                  alt="programista wykonuje projekt na komputerze"
+                  width="370"
+                  height="294"
+                />
+                <p class="label">APLIKACJE KOMPUTEROWE</p>
+              </li>
+            </div>
             <li>
               <img
                 src="./images/h2/h2-photo2.jpg"
@@ -362,5 +371,11 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
