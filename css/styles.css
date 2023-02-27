@@ -16,6 +16,7 @@ li {
   padding: 0;
   margin: 0;
 }
+
 button {
   padding: 0;
 }
@@ -23,6 +24,7 @@ button {
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -30,6 +32,7 @@ h4,
 p {
   margin: 0;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-color, #212121);
@@ -69,28 +72,36 @@ body {
   display: flex;
   align-items: center;
 }
+
 .bottom-border {
   border-bottom: 1px solid var(--border-line);
   padding-top: 24px;
   padding-bottom: 25px;
 }
+
 .menu {
   display: flex;
   margin-left: auto;
 }
+
 .item-contact {
   display: flex;
   align-items: center;
   margin-left: auto;
   margin-right: 50px;
 }
+
 .item-contact:hover,
 .item-contact:focus {
   fill: var(--accent-color);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
+
 .menu > .item:not(:last-child) {
   margin-right: 46px;
 }
+
 .menu > .link:not(:last-child) {
   margin-right: 50px;
   margin-left: 371px;
@@ -99,6 +110,7 @@ body {
 .contact {
   padding-right: 50px;
 }
+
 .header-icon {
   display: flex;
   margin-right: 10px;
@@ -111,28 +123,31 @@ body {
 .card-set {
   display: flex;
   gap: 30px;
+  height: 294px;
 }
-.thumb {
+
+.picture-title {
   position: relative;
+  height: 294px;
+}
+
+.picture-title > .label {
+  position: absolute;
+  bottom: 0;
+  font-family: "Roboto";
+  font-weight: 700;
   width: 370px;
   height: 70px;
-  background: rgba(47, 48, 58, 0.8);
-}
-.thumb > .label {
-  position: relative;
-  width: 190px;
-  height: 16px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
+  background-color: rgba(47, 48, 58, 0.8);
   color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .button-set {
   display: flex;
   flex-direction: row;
@@ -148,6 +163,7 @@ body {
 .index-item {
   flex-basis: calc((100% - 90px) / 4);
 }
+
 .main-header {
   font-weight: 900;
   font-size: 44px;
@@ -155,6 +171,7 @@ body {
   color: var(--third-color);
   margin-bottom: 30px;
 }
+
 .link-logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -162,7 +179,6 @@ body {
   line-height: 1.3;
   letter-spacing: 0.03em;
   text-decoration: none;
-
   margin-right: 93px;
   color: var(--main-color);
 }
@@ -181,6 +197,23 @@ body {
 .accent {
   color: var(--accent-color);
   fill: var(--accent-color);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+.active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  width: 58px;
+  height: 4px;
+  margin-top: 30px;
 }
 
 .button-index {
@@ -192,8 +225,9 @@ body {
   color: var(--button-color);
   border-radius: 4px;
   border: 0;
-
   padding: 10px 41px 10px 42px;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 button {
@@ -204,7 +238,10 @@ button:hover,
 button:focus {
   background-color: var(--accent-color);
   color: var(--third-color);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
+
 .buttons-category {
   font-weight: 500;
   font-size: 16px;
@@ -216,12 +253,16 @@ button:focus {
   border-radius: 4px;
   padding: 6px 22px;
 }
+
 .buttons-category:hover,
 .buttons-category:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
+
 .item-icon {
   background-color: var(--button-color);
   border-radius: 4px;
@@ -229,6 +270,7 @@ button:focus {
   width: 270px;
   height: 120px;
 }
+
 .text-title {
   font-weight: 700;
   font-size: 14px;
@@ -251,9 +293,11 @@ button:focus {
   flex-wrap: wrap;
   gap: 30px;
 }
+
 .project-item {
   flex-basis: calc((100% - 60px) / 3);
 }
+
 .profession {
   text-align: center;
   font-weight: 700;
@@ -275,7 +319,6 @@ button:focus {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-color);
-
   margin-bottom: 50px;
 }
 
@@ -284,6 +327,7 @@ button:focus {
   margin-right: auto;
   overflow: hidden;
 }
+
 .workers-information {
   display: flex;
   padding: 30px 32px;
@@ -293,32 +337,71 @@ button:focus {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .cards-portfolio {
   max-width: 400px;
   margin: 0;
-  overflow: hidden;
   background-color: var(--third-color);
 }
+
 .cards-portfolio:hover,
 .cards-portfolio:focus {
   border: 1px solid var(--border-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
+.cards-portfolio:hover .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 1.56;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.03em;
+  background: rgba(33, 150, 243, 0.9);
+  color: var(--third-color);
+  transform: translatey(100%);
+  transition: 250ms;
+  display: flex;
+  align-items: center;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 49px 45px 49px 24px;
+}
+
+.overlay:hover,
+.overlay:focus {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
+}
 .card-image {
   max-width: 100%;
   height: auto;
 }
 
+.skin {
+  position: relative;
+  overflow: hidden;
+}
+
 .card-image.no-gap {
   display: block;
 }
+
 .our-team {
   display: flex;
   justify-content: center;
 }
+
 .workers-name {
   font-weight: 500;
   font-size: 16px;
@@ -326,7 +409,6 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--main-color);
   text-align: center;
-
   margin-bottom: 10px;
 }
 
@@ -338,6 +420,7 @@ button:focus {
   text-align: center;
   margin-bottom: 16px;
 }
+
 .clients {
   text-align: center;
   font-weight: 700;
@@ -348,11 +431,13 @@ button:focus {
   margin-bottom: 50px;
   margin-top: 94px;
 }
+
 .clients-set {
   display: flex;
   gap: 30px;
   padding-bottom: 94px;
 }
+
 .clients-icon {
   box-sizing: border-box;
   display: flex;
@@ -361,35 +446,42 @@ button:focus {
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
 }
+
 .clients-icon:hover,
 .clients-icon:focus-visible {
   --color2: var(--accent-color);
   border-color: var(--accent-color);
   cursor: pointer;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
+
 .contact-link {
   color: var(--secondary-color);
   fill: var(--secondary-color);
   display: flex;
-
   align-items: center;
 }
 
 .icon-social {
   display: flex;
-
   gap: 10px;
 }
+
 .team-icon {
   border-radius: 4px;
   fill: var(--third-color);
 }
+
 .team-icon:hover,
 .team-icon:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
+
 .accent {
   color: var(--accent-color);
   font-family: "Raleway";
@@ -399,12 +491,14 @@ button:focus {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
 .card-body {
   padding: 20px 24px;
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
 }
+
 .project-name {
   font-weight: 700;
   font-size: 18px;
@@ -430,7 +524,6 @@ button:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-
   background: var(--footbar-background-color);
   margin-right: 0;
   margin-left: 0;
@@ -441,6 +534,7 @@ button:focus {
   align-items: baseline;
   flex-direction: row;
 }
+
 .footbar-social {
   display: flex;
   flex-wrap: wrap;
@@ -451,6 +545,7 @@ button:focus {
   color: var(--third-color);
   margin-bottom: 20px;
 }
+
 .logo-word {
   color: var(--third-color);
 }
@@ -470,14 +565,18 @@ button:focus {
   display: flex;
   gap: 10px;
 }
+
 .footer-icon {
   fill: rgba(255, 255, 255, 0.1);
 }
+
 .footer-icon:hover,
 .footer-icon:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .address a {
@@ -505,9 +604,12 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--footbar-contact-color);
 }
+
 .address a:hover,
 .address a:focus {
   color: var(--accent-color);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .backdrop {
