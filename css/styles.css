@@ -39,7 +39,6 @@ body {
 }
 
 .main-background {
-  background-color: var(--footbar-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: linear-gradient(
@@ -51,6 +50,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1600px;
+  background-color: var(--footbar-background-color);
 }
 .main-background-footer {
   padding-top: 60px;
@@ -74,9 +74,9 @@ body {
 }
 
 .bottom-border {
-  border-bottom: 1px solid var(--border-line);
   padding-top: 24px;
   padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-line);
 }
 
 .menu {
@@ -94,8 +94,8 @@ body {
 .item-contact:hover,
 .item-contact:focus {
   fill: var(--accent-color);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .menu > .item:not(:last-child) {
@@ -122,8 +122,8 @@ body {
 
 .card-set {
   display: flex;
-  gap: 30px;
   height: 294px;
+  gap: 30px;
 }
 
 .picture-title {
@@ -134,26 +134,26 @@ body {
 .picture-title > .label {
   position: absolute;
   bottom: 0;
-  font-family: "Roboto";
-  font-weight: 700;
   width: 370px;
   height: 70px;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background-color: rgba(47, 48, 58, 0.8);
-  color: var(--third-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .button-set {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 8px;
   margin-bottom: 50px;
+  gap: 8px;
 }
 
 .padding-flex {
@@ -168,8 +168,8 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  color: var(--third-color);
   margin-bottom: 30px;
+  color: var(--third-color);
 }
 
 .link-logo {
@@ -197,23 +197,24 @@ body {
 .accent {
   color: var(--accent-color);
   fill: var(--accent-color);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .active {
+  position: relative;
   color: var(--accent-color);
 }
 
 .active::after {
-  display: block;
   position: absolute;
+  top: 47px;
+  width: 100%;
+  height: 4px;
   content: "";
+  display: block;
   background-color: var(--accent-color);
   border-radius: 2px;
-  width: 58px;
-  height: 4px;
-  margin-top: 30px;
 }
 
 .button-index {
@@ -221,13 +222,13 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--button-color);
-  border-radius: 4px;
-  border: 0;
   padding: 10px 41px 10px 42px;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  color: var(--button-color);
+  background-color: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 button {
@@ -236,10 +237,10 @@ button {
 
 button:hover,
 button:focus {
-  background-color: var(--accent-color);
   color: var(--third-color);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  background-color: var(--accent-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .buttons-category {
@@ -247,11 +248,11 @@ button:focus {
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  background-color: var(--button-color);
+  padding: 6px 22px;
   color: var(--main-color);
+  background-color: var(--button-color);
   border: 0;
   border-radius: 4px;
-  padding: 6px 22px;
 }
 
 .buttons-category:hover,
@@ -259,16 +260,16 @@ button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .item-icon {
-  background-color: var(--button-color);
-  border-radius: 4px;
   display: inline-block;
   width: 270px;
   height: 120px;
+  background-color: var(--button-color);
+  border-radius: 4px;
 }
 
 .text-title {
@@ -276,9 +277,9 @@ button:focus {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  color: var(--main-color);
   margin-bottom: 10px;
   margin-top: 30px;
+  color: var(--main-color);
 }
 
 .text {
@@ -304,8 +305,8 @@ button:focus {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--main-color);
   margin-bottom: 50px;
+  color: var(--main-color);
 }
 
 .team-background {
@@ -318,8 +319,8 @@ button:focus {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--main-color);
   margin-bottom: 50px;
+  color: var(--main-color);
 }
 
 .card {
@@ -330,8 +331,8 @@ button:focus {
 
 .workers-information {
   display: flex;
-  padding: 30px 32px;
   flex-direction: column;
+  padding: 30px 32px;
   background-color: var(--third-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -342,16 +343,15 @@ button:focus {
   max-width: 400px;
   margin: 0;
   background-color: var(--third-color);
+  cursor: pointer;
 }
 
 .cards-portfolio:hover,
 .cards-portfolio:focus {
-  border: 1px solid var(--border-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .cards-portfolio:hover .overlay {
@@ -360,28 +360,28 @@ button:focus {
 
 .overlay {
   position: absolute;
-  font-family: "Roboto";
-  font-size: 18px;
-  line-height: 1.56;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 49px 45px 49px 24px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   background: rgba(33, 150, 243, 0.9);
   color: var(--third-color);
   transform: translatey(100%);
-  transition: 250ms;
-  display: flex;
-  align-items: center;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 49px 45px 49px 24px;
+  transition: 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay:hover,
 .overlay:focus {
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 .card-image {
   max-width: 100%;
@@ -407,18 +407,18 @@ button:focus {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--main-color);
   text-align: center;
   margin-bottom: 10px;
+  color: var(--main-color);
 }
 
 .workers-profession {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--secondary-color);
   text-align: center;
   margin-bottom: 16px;
+  color: var(--secondary-color);
 }
 
 .clients {
@@ -427,9 +427,9 @@ button:focus {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--main-color);
   margin-bottom: 50px;
   margin-top: 94px;
+  color: var(--main-color);
 }
 
 .clients-set {
@@ -452,15 +452,15 @@ button:focus {
   --color2: var(--accent-color);
   border-color: var(--accent-color);
   cursor: pointer;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .contact-link {
-  color: var(--secondary-color);
-  fill: var(--secondary-color);
   display: flex;
   align-items: center;
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
 }
 
 .icon-social {
@@ -478,18 +478,18 @@ button:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .accent {
-  color: var(--accent-color);
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  color: var(--accent-color);
 }
 
 .card-body {
@@ -524,10 +524,10 @@ button:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  background: var(--footbar-background-color);
   margin-right: 0;
   margin-left: 0;
   padding-right: 70px;
+  background: var(--footbar-background-color);
 }
 .footbar-elements {
   display: flex;
@@ -541,9 +541,10 @@ button:focus {
   margin-left: 0;
   padding-left: 0;
 }
+
 .social-text {
-  color: var(--third-color);
   margin-bottom: 20px;
+  color: var(--third-color);
 }
 
 .logo-word {
@@ -551,16 +552,17 @@ button:focus {
 }
 
 .logo-font {
-  color: var(--accent-color);
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-decoration: none;
   margin-bottom: 20px;
+  color: var(--accent-color);
+  text-decoration: none;
 }
+
 .icon-social-footer {
   display: flex;
   gap: 10px;
@@ -575,27 +577,26 @@ button:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .address a {
+  display: block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--third-color);
   text-decoration: none;
-  font-style: normal;
-  display: block;
 }
 
 .mail a {
+  margin: 9px 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footbar-contact-color);
   text-decoration: underline;
-  margin: 9px 0;
 }
 
 .telephone a {
@@ -608,8 +609,8 @@ button:focus {
 .address a:hover,
 .address a:focus {
   color: var(--accent-color);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms linear;
 }
 
 .backdrop {
@@ -619,19 +620,22 @@ button:focus {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  transition: 1500ms linear;
+  opacity: 1;
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
   background-color: var(--third-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%);
 }
 
 .close-button {
