@@ -89,13 +89,15 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: 50px;
+  transition-property: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .item-contact:hover,
 .item-contact:focus {
   fill: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transform: scale(1.2);
 }
 
 .menu > .item:not(:last-child) {
@@ -190,6 +192,8 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-color, #212121);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .nav-link:hover,
@@ -197,8 +201,6 @@ body {
 .accent {
   color: var(--accent-color);
   fill: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
 }
 
 .active {
@@ -227,8 +229,9 @@ body {
   background-color: var(--accent-color);
   border: 0;
   border-radius: 4px;
+  transition-property: none;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transition: 250ms;
 }
 
 button {
@@ -239,8 +242,6 @@ button:hover,
 button:focus {
   color: var(--third-color);
   background-color: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
 }
 
 .buttons-category {
@@ -253,6 +254,9 @@ button:focus {
   background-color: var(--button-color);
   border: 0;
   border-radius: 4px;
+  transition-property: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .buttons-category:hover,
@@ -260,8 +264,6 @@ button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
 }
 
 .item-icon {
@@ -350,8 +352,6 @@ button:focus {
 .cards-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
 }
 
 .cards-portfolio:hover .overlay {
@@ -373,16 +373,12 @@ button:focus {
   letter-spacing: 0.03em;
   background: rgba(33, 150, 243, 0.9);
   color: var(--third-color);
+  transition-property: none;
   transform: translatey(100%);
-  transition: 250ms linear;
+  transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay:hover,
-.overlay:focus {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
-}
 .card-image {
   max-width: 100%;
   height: auto;
@@ -445,6 +441,9 @@ button:focus {
   height: 92px;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
+  transition-property: var(--accent-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .clients-icon:hover,
@@ -452,8 +451,7 @@ button:focus {
   --color2: var(--accent-color);
   border-color: var(--accent-color);
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transform: scale(1.2);
 }
 
 .contact-link {
@@ -471,6 +469,9 @@ button:focus {
 .team-icon {
   border-radius: 4px;
   fill: var(--third-color);
+  transition-property: var(--accent-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms;
 }
 
 .team-icon:hover,
@@ -478,8 +479,7 @@ button:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transform: rotate(360deg);
 }
 
 .accent {
@@ -570,6 +570,9 @@ button:focus {
 
 .footer-icon {
   fill: rgba(255, 255, 255, 0.1);
+  transition-property: var(--accent-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon:hover,
@@ -577,8 +580,7 @@ button:focus {
   fill: var(--accent-color);
   --color2: var(--third-color);
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transform: rotate(360deg);
 }
 
 .address a {
@@ -588,6 +590,9 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--third-color);
   text-decoration: none;
+  transition-property: var(--accent-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail a {
@@ -609,8 +614,7 @@ button:focus {
 .address a:hover,
 .address a:focus {
   color: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms linear;
+  transform: scale(1.2);
 }
 
 .backdrop {
@@ -621,7 +625,7 @@ button:focus {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   visibility: visible;
-  transition: 1500ms linear;
+  transition: 250ms;
   opacity: 1;
 }
 
@@ -637,7 +641,6 @@ button:focus {
   border-radius: 4px;
   transform: translate(-50%, -50%);
 }
-
 .close-button {
   position: absolute;
   top: 8px;
