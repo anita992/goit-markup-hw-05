@@ -89,9 +89,9 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: 50px;
-  transition-property: none;
+  transition-property: fill transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 .item-contact:hover,
@@ -192,8 +192,9 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-color, #212121);
+  transition-property: fill color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 .nav-link:hover,
@@ -229,9 +230,9 @@ body {
   background-color: var(--accent-color);
   border: 0;
   border-radius: 4px;
-  transition-property: none;
+  transition-property: color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 button {
@@ -254,9 +255,9 @@ button:focus {
   background-color: var(--button-color);
   border: 0;
   border-radius: 4px;
-  transition-property: none;
+  transition-property: color background-color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 .buttons-category:hover,
@@ -373,10 +374,9 @@ button:focus {
   letter-spacing: 0.03em;
   background: rgba(33, 150, 243, 0.9);
   color: var(--third-color);
-  transition-property: none;
-  transform: translatey(100%);
-  transition: 250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translatey(100%);
 }
 
 .card-image {
@@ -441,9 +441,9 @@ button:focus {
   height: 92px;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
-  transition-property: var(--accent-color);
+  transition-property: color border-color transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 .clients-icon:hover,
@@ -469,9 +469,9 @@ button:focus {
 .team-icon {
   border-radius: 4px;
   fill: var(--third-color);
-  transition-property: var(--accent-color);
+  transition-property: color fill transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms;
 }
 
 .team-icon:hover,
@@ -570,8 +570,8 @@ button:focus {
 
 .footer-icon {
   fill: rgba(255, 255, 255, 0.1);
-  transition-property: var(--accent-color);
-  transition: 250ms;
+  transition-property: color fill transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -590,8 +590,8 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--third-color);
   text-decoration: none;
-  transition-property: var(--accent-color);
-  transition: 250ms;
+  transition-property: color transform;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
